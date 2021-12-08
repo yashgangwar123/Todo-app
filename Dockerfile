@@ -3,6 +3,10 @@ FROM node
 # create a folder home>app 
 RUN mkdir -p /home/app
 
+# install app dependencies
+COPY package.json ./home/app
+COPY package-lock.json ./home/app
+
 # copy all the files in that home>app
 COPY . /home/app
 
