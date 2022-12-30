@@ -5,6 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Application Building....'
+                nodejs('NodeJS-todo') {
+                    sh 'npm install'
+                    sh 'npm build'
+                }
             }
         }
         stage('Test') {
