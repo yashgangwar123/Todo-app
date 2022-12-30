@@ -7,7 +7,7 @@ pipeline {
                 echo 'Application Building....'
                 nodejs('NodeJS-todo') {
                     sh 'npm install'
-                    sh 'npm build'
+                    sh 'npm run build'
                 }
             }
         }
